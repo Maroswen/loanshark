@@ -1,5 +1,5 @@
 :root {
-    --ma-primary-color: #001e43; /* theme-100 or theme-200 */
+    --ma-primary-color: hsl(152, 38%, 15%); /* theme-100 or theme-200 */
     --ma-secondary-color: #ff993b; /* theme-core or theme-500 or theme-600 */
     --ma-light-color: #dfe3e4;
     --ma-dark-color: #1b1b1b;
@@ -38,12 +38,12 @@ footer, nav.navbar {
 footer .bi {
     font-size: 2rem;
     padding-left: .5rem;
-    color: var(--ma-light-color);
+    color: hsl(152, 38%, 55%);
     transition: color 0.15s ease-in;
 }
 
 footer .bi:hover {
-    color: var(--ma-secondary-color);
+    color: #198754
 }
 
 .devicons {
