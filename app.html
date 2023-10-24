@@ -69,7 +69,7 @@
         <h1 class="text-center fw-bold mb-3">Mortgage Calculator</h1>
         <div class="row row-cols-1">
             <div class="col col-md-4">
-                <div class="card shadow">
+                <div class="card shadow h-100">
                     <form>
                         <div class="form-group row m-3">
                             <label for="loanAmount" class="col col-form-label">Loan Amount</label>
@@ -103,7 +103,9 @@
                         </div>
                         
                     </form>
-                    <button id="btnCalculate" type="button" class="btn btn-success border fw-bold" onclick="getValues()">Calculate</button>
+                    <div class="card-footer h-100 text-end d-flex justify-content-end align-content-end">
+                        <button id="btnCalculate" type="button" class="btn btn-success btn-lg border fw-bold justify-content-end align-content-end" onclick="getValues()">Calculate</button>
+                    </div>
                 </div>
             </div>
             <div class="col col-md-8">
