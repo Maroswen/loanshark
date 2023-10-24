@@ -66,12 +66,80 @@
     </nav>
 
     <main class="container py-3">
-        <h1>APP UI GOES HERE</h1>
+        <h1 class="text-center fw-bold mb-3">MORTGAGE CALCULATOR</h1>
+        <div class="row row-cols-1">
+            <div class="col col-md-4">
+                <div class="card shadow">
+                    <form>
+                        <div class="form-group row m-3">
+                            <label for="loanAmount" class="col col-form-label">Loan Amount</label>
+                            <div class="col">
+                                <input class="form-control" 
+                                    placeholder="Loan Amount" 
+                                    type="text"                                   
+                                    name="loanInput"
+                                    id="loanInput" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-3">
+                            <label for="termInput" class="col col-form-label">Term (Months)</label>
+                            <div class="col">
+                                <input class="form-control" 
+                                    placeholder="Term" 
+                                    type="text" 
+                                    name="termInput"
+                                    id="termInput" />
+                            </div>
+                        </div>
+                        <div class="form-group row m-3">
+                            <label for="interestInput" class="col col-form-label">Interest Rate (%)</label>
+                            <div class="col">
+                                <input class="form-control" 
+                                    placeholder="Rate" 
+                                    type="text" 
+                                    name="interestInput"
+                                    id="interestInput" />
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <button id="btnCalculate" type="button" class="btn btn-success border fw-bold" onclick="getValues()">Calculate</button>
+                </div>
+            </div>
+            <div class="col col-md-8">
+                <div class="card shadow" id="monthly-payment-card">
+                    <h2 class="m-2 text-center">Your Monthly Payments</h2>
+                    <div class="card m-3">
+                        <h1 class="m-2 text-center" id="monthly-payment"></h1>
+                        <p class="ms-2" id="total-principal">Total Principal:</p>
+                        <p class="ms-2" id="total-interest">Total Interest:</p>
+                        <p class="ms-2" id="total-cost">Total Cost:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <input class="form-control my-3" placeholder="Enter a message" type="text" style="width: 12rem" name="message"
-            id="message" />
-
-        <button id="btnSubmit" class="btn btn-primary">Display Message</button>
+        <div class="mt-3 card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped border mt-2">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Month</th>
+                                <th>Payment</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Total Interest</th>
+                                <th>Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="mortgage-table">
+                            <!-- table body content goes here -->
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+        </div>
     </main>
 
 
@@ -103,14 +171,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="/js/site.js"></script>
-
-    <script>
-        // get the button on the page and assign it to a variable
-        let button = document.getElementById('btnSubmit');
-
-        // tell the button to run our display message function when clicked
-        button.addEventListener('click', displayMessage);
-    </script>
 
 </body>
 
