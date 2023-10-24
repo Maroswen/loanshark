@@ -13,6 +13,8 @@ function getValues() {
     
     let loanValue = loanValueInput.value;
 
+    loanValue = parseInt(loanValueInput.value);
+
     let termValue = termValueInput.value;
 
     let rateValue = rateValueInput.value;
@@ -62,7 +64,7 @@ function displayValues(values, interestPayments, principalPayments, remainingBal
 
     let totalCost = +values.loanValue + +values.totalInterestPaid;
 
-    document.getElementById('total-principal').innerHTML = `Total Principal: $${values.loanValue.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}`;
+    document.getElementById('total-principal').innerHTML = `Total Principal: ${values.loanValue.toLocaleString('en-US', {style: 'currency', currency: 'USD'})}`;
 
     document.getElementById('monthly-payment').innerHTML = values.totalMonthlyPayment.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
 
