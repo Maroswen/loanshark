@@ -103,7 +103,7 @@ function displayValues(values, interestPayments, principalPayments, remainingBal
         tableRow.appendChild(tableTotalInterestPaid);
 
         let tableBalance = document.createElement('td');
-        tableBalance.innerText = (remainingBalances[i]).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+        tableBalance.innerText = Math.abs(remainingBalances[i]).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
         tableRow.appendChild(tableBalance);
 
         paymentTable.appendChild(tableRow);
